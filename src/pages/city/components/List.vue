@@ -1,15 +1,15 @@
 <template>
   <div class="list" ref="wrapper">
-    <div>
-      <div class="area">
+    <ul class="content">
+      <li class="area">
         <div class="title border-topbottom">当前城市</div>
         <div class="button-list">
           <div class="button-wrapper">
             <div class="button">北京</div>
           </div>
         </div>
-      </div>
-      <div class="area">
+      </li>
+      <li class="area">
         <div class="title border-topbottom">热门城市</div>
         <div class="button-list">
           <div class="button-wrapper">
@@ -34,8 +34,8 @@
             <div class="button">北京</div>
           </div>
         </div>
-      </div>
-      <div class="area">
+      </li>
+      <li class="area">
         <div class="title border-topbottom">A</div>
         <div class="item-list">
           <div class="item border-bottom">安阳</div>
@@ -45,8 +45,8 @@
           <div class="item border-bottom">安阳</div>
           <div class="item border-bottom">安阳</div>
         </div>
-      </div>
-      <div class="area">
+      </li>
+      <li class="area">
         <div class="title border-topbottom">A</div>
         <div class="item-list">
           <div class="item border-bottom">安阳</div>
@@ -56,8 +56,8 @@
           <div class="item border-bottom">安阳</div>
           <div class="item border-bottom">安阳</div>
         </div>
-      </div>
-      <div class="area">
+      </li>
+      <li class="area">
         <div class="title border-topbottom">A</div>
         <div class="item-list">
           <div class="item border-bottom">安阳</div>
@@ -67,28 +67,17 @@
           <div class="item border-bottom">安阳</div>
           <div class="item border-bottom">安阳</div>
         </div>
-      </div>
-      <div class="area">
-        <div class="title border-topbottom">A</div>
-        <div class="item-list">
-          <div class="item border-bottom">安阳</div>
-          <div class="item border-bottom">安阳</div>
-          <div class="item border-bottom">安阳</div>
-          <div class="item border-bottom">安阳</div>
-          <div class="item border-bottom">安阳</div>
-          <div class="item border-bottom">安阳</div>
-        </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
-import Bscroll from 'better-scroll'
+import BScroll from 'better-scroll'
 export default {
   name: 'cityList',
   mounted () {
-    this.scroll = new Bscroll(this.$refs.wrapper)
+    this.scroll = new BScroll(this.$refs.wrapper)
   }
 }
 </script>
@@ -110,7 +99,6 @@ export default {
     left 0
     right 0
     buttom 0
-    background green
     .title
       line-height .54rem
       background #eee

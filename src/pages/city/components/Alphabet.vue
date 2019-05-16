@@ -18,9 +18,16 @@ export default {
 <style lang="stylus" scoped>
   @import '~styles/varibles.styl'
   .list
+    position absolute
+    display flex
+    flex-direction column
+    justify-content center
     right 0
     top 1.58rem
     bottom 0
     width .4rem
-    background red
+    .item
+      line-height .4rem
+      text-align center
+      color $bgColor
 </style>
