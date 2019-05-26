@@ -1,19 +1,30 @@
 <template>
   <ul class="list">
-    <li class="item" v-for="item of letters" :key="item" :ref="item" @click="handleLetterClick" @touchstart.prevent="handleTouchStart" @touchmove="handleTouchMove" @touchend="handleTouchEnd" >{{item}}</li>
+    <li
+      class="item"
+      v-for="item of letters"
+      :key="item"
+      :ref="item"
+      @touchstart.prevent="handleTouchStart"
+      @touchmove="handleTouchMove"
+      @touchend="handleTouchEnd"
+      @click="handleLetterClick"
+    >
+      {{item}}
+    </li>
   </ul>
 </template>
 
 <script>
 export default {
-  name: 'cityAlphabet',
+  name: 'CityAlphabet',
   props: {
-    list: Object
+    cities: Object
   },
   computed: {
     letters () {
       const letters = []
-      for (let i in this.list) {
+      for (let i in this.cities) {
         letters.push(i)
       }
       return letters
@@ -60,16 +71,16 @@ export default {
 <style lang="stylus" scoped>
   @import '~styles/varibles.styl'
   .list
-    position absolute
-    display flex
-    flex-direction column
-    justify-content center
-    right 0
-    top 1.58rem
-    bottom 0
-    width .4rem
+    display: flex
+    flex-direction: column
+    justify-content: center
+    position: absolute
+    top: 1.58rem
+    right: 0
+    bottom: 0
+    width: .4rem
     .item
-      line-height .4rem
-      text-align center
-      color $bgColor
+      line-height: .4rem
+      text-align: center
+      color: $bgColor
 </style>
